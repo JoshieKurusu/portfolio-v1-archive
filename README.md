@@ -2,7 +2,7 @@
 This portfolio was built in 2023 using HTML, CSS (SASS), JavaScript, and Bootstrap.  
 It represents version 1 of my developer journey and is now archived.  
 
-# Portfolio Showcase
+# 🎨 Portfolio Showcase
 A collection of my work, skills, and projects, designed to highlight creativity, technical expertise, and seamless user experience.
 
 # 📖 About 
