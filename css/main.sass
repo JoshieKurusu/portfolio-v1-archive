@@ -1,0 +1,995 @@
+@font-face 
+    font-family: 'Lulo Clean'
+    src: url(../font/Lulo-Clean-W01-One-Bold.woff) format(woff)
+@font-face
+    font-family: 'Avenir Light'
+    src: url(../font/Avenir-Light.woff) format(woff)
+@keyframes animate
+    100%
+        transform: scaleX(1)
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+:root
+    --first-base-color: #1F2833
+    --second-base-color: #FFFFFF
+    --first-accent-color: #49C5B6
+    --second-accent-color: #C5C6C7
+    --third-accent-color: #0B0C10
+    --fourth-accent-color: #45A29E
+    --fifth-accent-color: #939DAB
+    --header-footer-color: #747A88
+    --bg-color: #333B50
+body
+    scroll-behavior: smooth
+.show
+    overflow: hidden
+header
+    background-color: var(--header-footer-color)
+    .navbar
+        margin: 0
+        padding: 0
+        .container-fluid 
+            display: flex
+            padding: 14px 12px
+            justify-content: space-between
+            a img
+                width: 44px
+                height: 44px
+            .navbar-toggler 
+                width: 20px
+                height: 20px
+                position: relative
+                transition: .5s ease-in-out
+                border: none
+                margin-left: 20px
+                z-index: 999
+                span 
+                    margin: 0
+                    padding: 0
+                .toggler-icon 
+                    display: block
+                    position: absolute
+                    height: 2px
+                    width: 100%
+                    left: 0
+                    opacity: 1
+                    transform: rotate(0deg)
+                    background-color: var(--second-base-color)
+                    transition: .25s ease-in-out
+                .top-bar 
+                    margin-top: 0
+                    transform: rotate(135deg)
+                    background-color: var(--first-accent-color)
+                .middle-bar
+                    margin-top: 0
+                    opacity: 0
+                    filter: alpha(opacity=0)
+                .bottom-bar
+                    margin-top: 0
+                    transform: rotate(-135deg)
+                    background-color: var(--first-accent-color)
+                &:focus
+                    box-shadow: none
+            .navbar-toggler.collapsed
+                .top-bar
+                    margin-top: -20px
+                    transform: rotate(0deg)
+                    background-color: var(--second-base-color)
+                .middle-bar
+                    opacity: 1
+                    filter: alpha(opacity=100)
+                .bottom-bar
+                    margin-top: 20px
+                    transform: rotate(0deg)
+                    background-color: var(--second-base-color)
+            .navbar-collapse
+                width: 100%
+                height: 100vh
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                z-index: 1
+                background-color: var(--bg-color)
+                transition: 0.15s ease-in-out
+                .navbar-nav
+                    margin-top: 80px
+                    .nav-item 
+                        .nav-link
+                            padding: 12px 0
+                            cursor: pointer
+                            color: var(--fifth-accent-color)
+                            text-align: center
+                            font-size: clamp(0.75rem, -0.595vw + 1.119rem, 1rem)
+                            line-height: clamp(1.125rem, -0.893vw + 1.679rem, 1.5rem)
+                            font-weight: 600
+                            font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                            &:hover
+                                color: var(--second-accent-color)
+                        .active
+                            color: var(--first-accent-color)
+main
+    // HOME PAGE CSS
+    .welcome
+        height: 1029px
+        background: url("../img/bg-img/welcome-bg-img.webp") no-repeat center top / cover
+        background-blend-mode: overlay
+        .container-fluid
+            height: 100%
+            .welcome-text
+                max-width: 396px
+                min-width: 280px
+                width: 80%
+                margin: 0 auto
+                padding-top: 48px
+                h1
+                    color: var(--second-base-color)
+                    margin-bottom: 20px
+                    font-size: clamp(2.438rem, 3.869vw + 1.664rem, 4.063rem)
+                    line-height: clamp(3.608rem, 5.726vw + 2.462rem, 6.013rem)
+                    font-weight: 600
+                    font-family: 'Lulo Clean', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                    span
+                        color: var(--first-accent-color)
+                p
+                    letter-spacing: 0.18em
+                    margin: 0
+                    color: var(--second-base-color)
+                    font-size: clamp(1.5rem, 0vw + 1.5rem, 1.5rem)
+                    line-height: clamp(2.7rem, 0vw + 2.7rem, 2.7rem)
+                    font-weight: 400
+                    font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    .professional
+        height: 926px
+        background: url("../img/bg-img/professional-bg-img.webp") no-repeat 50% -10% / cover
+        background-blend-mode: overlay
+        .container-fluid
+            height: 100%
+            position: relative
+            .cv
+                max-width: 560px
+                min-width: 280px
+                width: 80%
+                margin: 0 auto
+                position: absolute
+                top: 0
+                left: 50%
+                padding: 60px 0
+                border-radius: 0
+                background-color: var(--first-base-color)
+                transform: translate(-50%, -72.2%)
+                img
+                    width: 76px
+                    height: 77px
+                    margin: 0 auto
+                .card-body
+                    max-width: 494px
+                    min-width: 214px
+                    width: 76.9%
+                    margin: 40px auto 45px
+                    padding: 0
+                    flex: none
+                    p
+                        text-align: center
+                        color: var(--second-base-color)
+                        font-size: clamp(0.875rem, 0.149vw + 0.845rem, 0.938rem)
+                        line-height: clamp(2.188rem, 0.372vw + 2.113rem, 2.344rem)
+                        font-weight: 400
+                        font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                .cv-dl-btn
+                    width: 220px
+                    margin: 0 auto
+                    padding:  12.5px 0
+                    border-radius: 0
+                    border: 1px solid var(--first-accent-color)
+                    color: var(--second-base-color)
+                    font-size: clamp(0.875rem, 0vw + 0.875rem, 0.875rem)
+                    line-height: clamp(1.313rem, 0vw + 1.313rem, 1.313rem)
+                    font-weight: 400
+                    font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                    &:hover
+                        background: var(--first-accent-color)
+                        transition:  all 0.4s ease-in-out
+            .profession
+                max-width: 560px
+                min-width: 280px
+                width: 80%
+                margin: 0 auto
+                padding-top: 255px
+                .professional-text
+                    margin: 0 auto 41px
+                    text-align: center
+                    min-width: 280px
+                    width: 100%
+                    h2
+                        margin-bottom: 12px
+                        color: var(--second-base-color)
+                        font-size: clamp(1.375rem, 2.976vw + 0.78rem, 2.625rem)
+                        line-height: clamp(1.788rem, 3.869vw + 1.014rem, 3.413rem)
+                        font-weight: 600
+                        font-family: 'Lulo Clean', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                        span
+                            color: var(--second-accent-color)
+                    p
+                        margin: 0
+                        letter-spacing: 0.18em
+                        color: var(--second-base-color)
+                        font-size: clamp(1.313rem, 0.446vw + 1.223rem, 1.5rem)
+                        line-height: clamp(2.363rem, 0.804vw + 2.202rem, 2.7rem)
+                        font-weight: 400
+                        font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, sans-serif
+                .knowledge-progress
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    gap: 9px 0
+                    .photoshop, .react, .wix, .javascript, .html-css, .bootstrap, .tailwindcss
+                        label
+                            margin-bottom: -5px
+                            letter-spacing: 0.05em
+                            color: var(--second-accent-color)
+                            font-size: clamp(0.875rem, -0.149vw + 0.967rem, 0.938rem)
+                            line-height: clamp(2.45rem, -0.417vw + 2.708rem, 2.625rem)
+                            font-weight: 400
+                            font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, sans-serif
+                        .progress
+                            width: 100%
+                            margin: 0 auto
+                            background-color: transparent
+                            border-radius: 0
+                            .progress-bar
+                                height: 16px
+                                background: transparent
+                                position: relative
+                                transform: scaleX(0)
+                                animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards
+                                transform-origin: left
+                                overflow: visible
+                                span
+                                    height: 100%
+                                    width: 85%
+                                    background: var(--first-accent-color)
+                                    position: absolute
+                                    transform: scaleX(0)
+                                    transform-origin: left
+                                    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards
+                                    &::after
+                                        position: absolute
+                                        right: -36px
+                                        top: -11px
+                                        background: transparent
+                                        color: var(--second-accent-color)
+                                        height: 16px
+                                        width: 30px
+                                        text-align: center
+                                        font-size: clamp(0.875rem, -0.149vw + 0.967rem, 0.938rem)
+                                        line-height: clamp(2.45rem, -0.417vw + 2.708rem, 2.625rem)
+                                        font-weight: 400
+                                        font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, sans-serif
+                            .photoshop-progress-bar
+                                width: 20%
+                                span::after
+                                    content: "20%"
+                            .react-progress-bar
+                                width: 13%
+                                span::after
+                                    content: "13%"
+                            .wix-progress-bar
+                                width: 56%
+                                span::after
+                                    content: "56%"
+                            .javascript-progress-bar
+                                width: 44%
+                                span::after
+                                    content: "44%"
+                            .html-css-progress-bar
+                                width: 68%
+                                span::after
+                                    content: "68%"
+                            .bootstrap-progress-bar
+                                width: 46%
+                                span::after
+                                    content: "46%"
+                            .tailwindcss-progress-bar
+                                width: 40%
+                                span::after
+                                    content: "40%"
+    .portfolio-experience
+        height: 3058px
+        background: url("../img/bg-img/portfolio-bg-img.webp") no-repeat center center / cover
+        background-blend-mode: overlay
+        .container-fluid
+            padding: 37px 12px 24px
+            height: 100%
+            .portfolio
+                margin: 37px auto
+                .portfolio-text
+                    min-width: 280px
+                    width: 100%
+                    margin: 0 auto 10px
+                    text-align: center
+                    h2
+                        margin-bottom: 10px
+                        color: var(--second-base-color)
+                        font-size: clamp(1.375rem, 2.976vw + 0.78rem, 2.625rem)
+                        line-height: clamp(2.035rem, 4.405vw + 1.154rem, 3.885rem)
+                        font-weight: 600
+                        font-family: 'Lulo Clean', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                        span
+                            color: var(--second-accent-color)
+                    p
+                        letter-spacing: 0.1em
+                        width: 249px
+                        margin: 0 auto
+                        color: var(--second-base-color)
+                        font-size: clamp(1.313rem, 0.446vw + 1.223rem, 1.5rem)
+                        line-height: clamp(2.363rem, 0.804vw + 2.202rem, 2.7rem)
+                        font-weight: 400
+                        font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                        a
+                            letter-spacing: 0.1em
+                            color: var(--second-accent-color)
+                            text-decoration: none
+                .project-logo
+                    .project-1, .project-2, .project-3
+                        position: relative
+                        width: 280px
+                        margin: 0 auto
+                        a .logo-1, .logo-2, .logo-3
+                            width: 100%
+                        span a
+                            color: var(--bg-color)
+                            &:hover
+                                color: var(--second-base-color)
+                            i
+                                position: absolute
+                                right: 12px
+                                bottom: 12px
+                                font-size: 1.375rem
+                                opacity: 0
+                        &:hover
+                            .logo-1, .logo-2, .logo-3
+                                filter: brightness(90%)
+                                transition:  .2s ease-in-out
+                            span i
+                                opacity: 1
+                                transition:  .2s ease-in-out
+            .experience
+                max-width: 560px
+                min-width: 280px
+                width: 80%
+                margin: 0 auto 24px
+                padding-top: 37px
+                .experience-text
+                    max-width: none
+                    margin-bottom: 24px
+                    text-align: center
+                    h2
+                        color: var(--second-base-color)
+                        font-size: clamp(1.375rem, 2.976vw + 0.78rem, 2.625rem)
+                        line-height: clamp(2.035rem, 4.405vw + 1.154rem, 3.885rem)
+                        font-weight: 600
+                        font-family: 'Lulo Clean', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                        span
+                            color: var(--second-accent-color)
+                .experience-content
+                    .middle-icon
+                        display: none
+                    .first-exp, .second-exp, .third-exp
+                        max-width: 440px
+                        margin: 16px auto 0
+                        font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                        .year
+                            width: 100%
+                            color: var(--first-accent-color)
+                            margin-bottom: 10px
+                            letter-spacing: 0.05em
+                            text-align: right
+                            font-weight: 600
+                            font-size: clamp(1rem, 0vw + 1rem, 1rem)
+                            line-height: clamp(1.2rem, 0vw + 1.2rem, 1.2rem)
+                        .company
+                            margin-bottom: 12px
+                            color: var(--second-base-color)
+                            font-weight: 400
+                            font-size: clamp(1.375rem, 0.298vw + 1.315rem, 1.5rem)
+                            line-height: clamp(1.581rem, 0.342vw + 1.513rem, 1.725rem)
+                        .job
+                            font-weight: 400
+                            font-size: clamp(0.938rem, 0vw + 0.938rem, 0.938rem)
+                            line-height: clamp(1.781rem, 0vw + 1.781rem, 1.781rem)
+                            .role
+                                color: var(--second-base-color)
+                            .description
+                                color: var(--second-accent-color)
+                                margin: 0
+    .contact
+        height: 194px
+        background: url("../img/bg-img/contact-bg-img.webp") no-repeat 50% 0 / cover
+        background-blend-mode: overlay
+        .container-fluid
+            position: relative
+            .contact-card
+                max-width: 560px
+                min-width: 280px
+                width: 80%
+                margin: 0 auto
+                padding: 53px 0
+                position: absolute
+                top: 0
+                left: 50%
+                transform: translate(-50%, -81.6%)
+                border-radius: 0
+                background-color: var(--first-base-color)
+                text-align: center
+                .card-body
+                    margin: 0 auto
+                    padding: 0
+                    .card-body-text
+                        margin-bottom: 18px
+                        color: var(--second-base-color)
+                        font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                        h4
+                            width: 260px
+                            margin: 0 auto 25px
+                            font-weight: 400
+                            font-size: clamp(1.5rem, 0vw + 1.5rem, 1.5rem)
+                            line-height: clamp(1.725rem, 0vw + 1.725rem, 1.725rem)
+                        .contact-description
+                            max-width: 272px
+                            min-width: 240px
+                            width: 90%
+                            letter-spacing: 0.05em
+                            margin: 0 auto
+                            font-weight: 400
+                            font-size: clamp(0.938rem, 0vw + 0.938rem, 0.938rem)
+                            line-height: clamp(1.781rem, 0vw + 1.781rem, 1.781rem)
+                            .my-website, .my-tel-num
+                                margin-bottom: 0
+                    .card-body-form
+                        max-width: 339px
+                        min-width: 260px
+                        width: 100%
+                        padding: 0 16px
+                        .first-row, .second-row, .third-row
+                            input, textarea
+                                border-radius: 0
+                            ::placeholder
+                                color: var(--second-accent-color)
+                        .first-row
+                            display: flex
+                            column-gap: 15px
+                            input
+                                width: 50%
+                                height: 42px
+                        .second-row, .third-row
+                            margin: 12px 0
+                        .third-row textarea
+                            height: 138px
+                        .fourth-row button
+                            width: 100%
+                            padding: 6px 0
+                            border-radius: 0
+                            background-color: var(--first-accent-color)
+                            color: var(--second-base-color)
+                            font-size: clamp(0.938rem, 0vw + 0.938rem, 0.938rem)
+                            line-height: clamp(1.406rem, 0vw + 1.406rem, 1.406rem)
+                            font-weight: 400
+                            font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                            &:hover
+                                background: var(--first-base-color)
+                                transition:  all 0.3s ease-in-out
+                        .fifth-row
+                            height: 20px 
+                            .success-msg
+                                display: none
+                                margin: 0
+                                padding-top: 6px
+                                font-size: clamp(0.688rem, 0.595vw + 0.568rem, 0.938rem)
+                                line-height: clamp(0.825rem, 0.714vw + 0.682rem, 1.125rem)
+                                color: var(--first-accent-color)
+                .social-bar
+                    margin-top: 39px
+                    a
+                        margin: 0 10px
+                        i
+                            font-size: 1.5rem
+                            color: var(--second-base-color)
+    // PORTFOLIO PAGE CSS
+    .portfolio-grid
+        background-color: var(--bg-color)
+        .container-fluid
+            display: grid
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(auto, 1fr)
+            grid-gap: 0px
+            padding: 0
+            .grid-row-1
+                grid-area: 1 / 1 / 2 / 2
+                .row-1
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+                    grid-template-rows: repeat(8, 1fr)
+                    grid-gap: 0px
+                    position: relative
+                    .project-1, .project-2, .project-3, .project-4, .project-5, .project-6, .project-7
+                        position: relative
+                        border: 1px solid var(--second-base-color)
+                        span h6
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            opacity: 0
+                            transform: translate(-50%, -50%)
+                            color: var(--second-base-color)
+                            font-size: clamp(0.938rem, 0vw + 0.938rem, 0.938rem)
+                            line-height: clamp(1.875rem, 0vw + 1.875rem, 1.875rem)
+                            font-weight: 400
+                            font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                        span a
+                            color: var(--first-base-color)
+                            &:hover
+                                color: var(--third-accent-color)
+                            i
+                                position: absolute
+                                right: 12px
+                                bottom: 12px
+                                font-size: 1.375rem
+                                opacity: 0
+                        &:hover
+                            img
+                                filter: brightness(80%)
+                                transition:  .2s ease-in-out
+                            span h6
+                                opacity: 1
+                                transition:  .2s ease-in-out
+                            span i
+                                opacity: 1
+                                transition:  .2s ease-in-out
+                    .project-1
+                        grid-area: 1 / 1 / 3 / 3
+                        img
+                            width: 100%
+                    .project-2
+                        grid-area: 3 / 1 / 4 / 2
+                        img
+                            width: 100%
+                    .project-3
+                        grid-area: 3 / 2 / 4 / 3
+                        img
+                            width: 100%
+                    .project-4
+                        grid-area: 4 / 1 / 5 / 2
+                        img
+                            width: 100%
+                    .project-5
+                        grid-area: 4 / 2 / 5 / 3
+                        img
+                            width: 100%
+                    .project-6
+                        grid-area: 5 / 1 / 7 / 3
+                        img
+                            width: 100%
+                    .project-7
+                        grid-area: 7 / 1 / 9 / 3
+                        img
+                            width: 100%
+            .grid-row-2
+                grid-area: 2 / 1 / 3 / 2
+                .row-2
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+                    grid-template-rows: repeat(7, 1fr)
+                    grid-gap: 0px
+                    .project-8, .project-9, .project-10, .project-11, .project-12
+                        position: relative
+                        border: 1px solid var(--second-base-color)
+                        span h6
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            opacity: 0
+                            transform: translate(-50%, -50%)
+                            color: var(--second-base-color)
+                            font-size: clamp(0.938rem, 0vw + 0.938rem, 0.938rem)
+                            line-height: clamp(1.875rem, 0vw + 1.875rem, 1.875rem)
+                            font-weight: 400
+                            font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+                        span a
+                            color: var(--first-base-color)
+                            &:hover
+                                color: var(--third-accent-color)
+                            i
+                                position: absolute
+                                right: 12px
+                                bottom: 12px
+                                font-size: 1.375rem
+                                opacity: 0
+                        &:hover
+                            img
+                                filter: brightness(80%)
+                                transition:  .2s ease-in-out
+                            span h6
+                                opacity: 1
+                                transition:  .2s ease-in-out
+                            span i
+                                opacity: 1
+                                transition:  .2s ease-in-out
+                    .project-8
+                        grid-area: 1 / 1 / 3 / 3
+                        img
+                            width: 100%
+                    .project-9
+                        grid-area: 3 / 1 / 5 / 3
+                        img
+                            width: 100%
+                    .project-10
+                        grid-area: 5 / 1 / 7 / 3
+                        img
+                            width: 100%
+                    .project-11
+                        grid-area: 7 / 1 / 8 / 2
+                        img
+                            width: 100%
+                    .project-12
+                        grid-area: 7 / 2 / 8 / 3
+                        img
+                            width: 100%
+footer
+    background: var(--header-footer-color)
+    height: 154px
+    .container-fluid
+        height: 100%
+        padding: 24px 12px
+        width: 296px
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        a img
+            width: 55px
+            height: 55px
+        p
+            margin: 12px 0 0
+            text-align: center
+            color: var(--second-accent-color)
+            font-size: clamp(0.875rem, -0.149vw + 0.967rem, 0.938rem)
+            line-height: clamp(1.05rem, -0.179vw + 1.161rem, 1.125rem)
+            font-weight: 400
+            font-family: 'Avenir Light', "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+            a
+                color: var(--second-accent-color)
+@media screen and (min-width: 375px)
+    header .navbar .container-fluid .navbar-collapse
+        width: 260px
+    main .contact
+        height: 244px
+@media screen and (min-width: 425px)
+    header .navbar .container-fluid
+        padding: 14px 24px
+        .navbar-collapse
+            width: 270px
+    main
+        .welcome .container-fluid .welcome-text
+            padding-top: 58px
+        .portfolio-experience .container-fluid
+            .portfolio  
+                .portfolio-text 
+                    margin-bottom: 20px
+                    p
+                        width: auto
+                .project-logo
+                    .project-1, .project-2, .project-3
+                        width: 320px
+        .contact
+            height: 302px
+            .container-fluid .contact-card
+                transform: translate(-50%, -78%)
+    @media only screen and (min-width: 473px)
+        main .welcome .container-fluid .welcome-text
+            padding-top: 87px
+@media screen and (min-width: 576px)
+    header .navbar .container-fluid
+        padding: 14px 32px
+        .navbar-collapse
+            width: 45%
+@media screen and (min-width: 768px)
+    header
+        background-color: transparent
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        .navbar
+            padding: 0
+            margin: 0
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1)
+            .container-fluid 
+                padding: 12px 42px
+                height: 69px
+                a img 
+                    width: 40px
+                    height: 40px
+                .navbar-collapse
+                    position: static
+                    width: 475px
+                    height: 44px
+                    padding: 0
+                    background: none
+                    flex-grow: unset
+                    .navbar-nav
+                        margin: 0
+                        .nav-item .nav-link
+                            padding: 9px 14px
+                            font-weight: 400
+                            &:hover
+                                color: var(--second-accent-color)
+    main
+        // Home Page CSS
+        .welcome 
+            background-attachment: fixed
+            .container-fluid
+                padding: 0
+                .welcome-text
+                    max-width: 439px
+                    padding-top: 181px
+                    h1
+                        margin-bottom: 49px
+        .professional
+            height: 1054px
+            background-attachment: fixed
+            .container-fluid
+                padding: 0
+                .cv
+                    max-width: none
+                    transform: translate(-50%, -50%)
+                    padding: 60px 0
+                    width: 75%
+                .profession
+                    padding-top: 426px
+                    max-width: none
+                    width: 85%
+                    .professional-text
+                        margin-bottom: 79px
+                        h2
+                            margin-bottom: 19px
+                    .knowledge-progress
+                        gap: 14px 0
+                        .photoshop, .react, .wix, .javascript, .html-css, .bootstrap, .tailwindcss
+                            display: flex
+                            flex-direction: row
+                            justify-content: center
+                            align-items: center
+                            gap: 0 26px
+                            label
+                                width: 134px
+                                text-align: right
+                            .progress .progress-bar span::after
+                                right: -50px
+        .portfolio-experience
+            height: 2327px
+            .container-fluid
+                padding: 0
+                .portfolio
+                    margin: 0 auto
+                    padding-top: 93px
+                    .portfolio-text
+                        margin-bottom: 86px
+                        h2
+                            margin-bottom: 15px
+                        p
+                            width: auto
+                    .project-logo
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        .project-1, .project-2, .project-3
+                            width: 226px
+                            margin: 0
+                .experience
+                    max-width: none
+                    width: 100%
+                    margin: 133px auto 0
+                    padding: 0
+                    .experience-text h2
+                        margin-bottom: 12px
+                    .experience-content
+                        margin-top: 56px
+                        display: grid
+                        justify-content: center
+                        grid-template-columns: 360px 32px 360px
+                        grid-template-rows: repeat(auto, 1fr)
+                        grid-column-gap: 7px
+                        .first-exp, .second-exp, .third-exp
+                            width: 311px
+                            height: auto
+                            margin: 10px auto 0
+                            .year
+                                margin-bottom: 13px
+                            .company
+                                margin-bottom: 30px
+                        .middle-icon
+                            display: block
+                            margin: 10px auto 0
+                            grid-area: 1 / 2 / 4 / 3
+                        .first-exp
+                            grid-area: 1 / 3 / 2 / 4
+                            .year
+                                text-align: left
+                        .second-exp
+                            grid-area: 2 / 1 / 3 / 2
+                            text-align: right
+                        .third-exp
+                            grid-area: 3 / 3 / 4 / 4
+                            .year
+                                text-align: left
+        .contact
+            height: 402px
+            background-attachment: fixed
+            .container-fluid .contact-card
+                transform: translate(-50%, -50%)
+                max-width: none
+                padding: 55px 0
+                .card-body
+                    max-width: none
+                    display: flex
+                    justify-content: space-between
+                    gap: 0 33px
+                    align-items: center
+                    .card-body-text
+                        width: 242px
+                        text-align: left
+                        margin: -10% 0 0
+                        h4
+                            width: auto
+                            margin-bottom: 29px
+                        .contact-description
+                            min-width: 0
+                            width: auto
+                            .my-paragraph
+                                margin-bottom: 24px
+                    .card-body-form
+                        width: 239px
+                        max-width: none
+                        min-width: 0
+                        padding: 0
+                        .fourth-row button
+                            padding: 11px 0
+        // Portfolio Page CSS
+        .portfolio-grid
+            overflow: hidden
+            padding-top: 69px
+            .container-fluid
+                .grid-row-1 .row-1
+                    grid-template-columns: repeat(7, 1fr)
+                    grid-template-rows: repeat(3, 1fr)
+                    .project-1
+                        grid-area: 1 / 1 / 3 / 3
+                    .project-2
+                        grid-area: 3 / 1 / 4 / 2
+                    .project-3
+                        grid-area: 3 / 2 / 4 / 3
+                    .project-4
+                        grid-area: 1 / 3 / 2 / 4
+                    .project-5
+                        grid-area: 1 / 4 / 2 / 5
+                    .project-6
+                        grid-area: 2 / 3 / 4 / 5
+                    .project-7
+                        grid-area: 1 / 5 / 4 / 8
+                .grid-row-2 .row-2
+                    grid-template-columns: repeat(8, 1fr)
+                    grid-template-rows: repeat(3, 1fr)
+                    .project-8
+                        grid-area: 1 / 1 / 2 / 2
+                    .project-9
+                        grid-area: 1 / 2 / 2 / 3
+                    .project-10
+                        grid-area: 2 / 1 / 4 / 3
+                    .project-11
+                        grid-area: 1 / 3 / 4 / 6
+                    .project-12
+                        grid-area: 1 / 6 / 4 / 9
+    footer
+        background: var(--bg-color)
+        height: auto
+        .container-fluid
+            padding: 24px 42px
+            width: 100%
+            flex-direction: row
+            justify-content: space-around
+            margin: 0
+            a img
+                    width: 40px
+                    height: 40px
+            .text
+                max-width: 744px
+                width: 475px
+                p
+                    margin: 0
+                    text-align: left
+                    a
+                        margin: 0
+@media screen and (min-width: 992px)
+    header .navbar .container-fluid
+        max-width: 980px
+        margin: 0 auto
+        padding: 0 56px
+        .navbar-collapse
+            max-width: none
+            width: 100%
+            .navbar-nav
+                margin-left: 96px
+    main
+        .welcome
+            height: 1086px
+            .container-fluid
+                max-width: 980px
+                .welcome-text
+                    max-width: 539px
+                    width: 100%
+                    margin-left: 204px
+        .professional
+            height: 1213px
+            background-position-y: 0%
+            .container-fluid
+                max-width: 980px
+                .cv
+                    width: 820px
+                    height: 670px
+                    padding: 79px 0 115px
+                    img
+                        width: 100px
+                        height: 100px
+                    .card-body
+                        max-width: 528px
+                        width: 100%
+                        height: 225px
+                        margin: 52px auto 49px
+                .profession
+                    padding-top: 511px
+        .portfolio-experience
+            height: 2744px
+            background-position: 50% 25%
+            .container-fluid
+                max-width: 980px
+                .portfolio
+                    padding-top: 185px
+                    .project-logo
+                        .project-1, .project-2, .project-3
+                            width: 326px
+                .experience
+                    margin-top: 265px
+                    .experience-text
+                        margin: 0
+                        .experience-content
+                            margin-top: 91px
+        .contact
+            height: 552px
+            .container-fluid .contact-card
+                width: 940px
+                height: 631px
+                padding: 126px 0 63px
+                .card-body
+                    gap: 0 65px
+                    .card-body-text
+                        width: 272px
+                        height: 285px
+                        margin-top: -7%
+                    .card-body-form
+                        width: 318px
+                .social-bar
+                    margin-top: 78px
+    footer .container-fluid
+        max-width: 980px
+        margin: 0 auto
+        padding: 24px 56px
+        justify-content: start
+        .text
+            max-width: none
+            width: 100%
+            p
+                text-align: center                  

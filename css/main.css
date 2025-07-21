@@ -1,0 +1,1268 @@
+@font-face {
+  font-family: "Lulo Clean";
+  src: url(../font/Lulo-Clean-W01-One-Bold.woff) format(woff);
+}
+@font-face {
+  font-family: "Avenir Light";
+  src: url(../font/Avenir-Light.woff) format(woff);
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --first-base-color: #1F2833;
+  --second-base-color: #FFFFFF;
+  --first-accent-color: #49C5B6;
+  --second-accent-color: #C5C6C7;
+  --third-accent-color: #0B0C10;
+  --fourth-accent-color: #45A29E;
+  --fifth-accent-color: #939DAB;
+  --header-footer-color: #747A88;
+  --bg-color: #333B50;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.show {
+  overflow: hidden;
+}
+
+header {
+  background-color: var(--header-footer-color);
+}
+header .navbar {
+  margin: 0;
+  padding: 0;
+}
+header .navbar .container-fluid {
+  display: flex;
+  padding: 14px 12px;
+  justify-content: space-between;
+}
+header .navbar .container-fluid a img {
+  width: 44px;
+  height: 44px;
+}
+header .navbar .container-fluid .navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  border: none;
+  margin-left: 20px;
+  z-index: 999;
+}
+header .navbar .container-fluid .navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+header .navbar .container-fluid .navbar-toggler .toggler-icon {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  opacity: 1;
+  transform: rotate(0deg);
+  background-color: var(--second-base-color);
+  transition: 0.25s ease-in-out;
+}
+header .navbar .container-fluid .navbar-toggler .top-bar {
+  margin-top: 0;
+  transform: rotate(135deg);
+  background-color: var(--first-accent-color);
+}
+header .navbar .container-fluid .navbar-toggler .middle-bar {
+  margin-top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+header .navbar .container-fluid .navbar-toggler .bottom-bar {
+  margin-top: 0;
+  transform: rotate(-135deg);
+  background-color: var(--first-accent-color);
+}
+header .navbar .container-fluid .navbar-toggler:focus {
+  box-shadow: none;
+}
+header .navbar .container-fluid .navbar-toggler.collapsed .top-bar {
+  margin-top: -20px;
+  transform: rotate(0deg);
+  background-color: var(--second-base-color);
+}
+header .navbar .container-fluid .navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+header .navbar .container-fluid .navbar-toggler.collapsed .bottom-bar {
+  margin-top: 20px;
+  transform: rotate(0deg);
+  background-color: var(--second-base-color);
+}
+header .navbar .container-fluid .navbar-collapse {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: var(--bg-color);
+  transition: 0.15s ease-in-out;
+}
+header .navbar .container-fluid .navbar-collapse .navbar-nav {
+  margin-top: 80px;
+}
+header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link {
+  padding: 12px 0;
+  cursor: pointer;
+  color: var(--fifth-accent-color);
+  text-align: center;
+  font-size: clamp(0.75rem, -0.595vw + 1.119rem, 1rem);
+  line-height: clamp(1.125rem, -0.893vw + 1.679rem, 1.5rem);
+  font-weight: 600;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  color: var(--second-accent-color);
+}
+header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .active {
+  color: var(--first-accent-color);
+}
+
+main .welcome {
+  height: 1029px;
+  background: url("../img/bg-img/welcome-bg-img.webp") no-repeat center top/cover;
+  background-blend-mode: overlay;
+}
+main .welcome .container-fluid {
+  height: 100%;
+}
+main .welcome .container-fluid .welcome-text {
+  max-width: 396px;
+  min-width: 280px;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 48px;
+}
+main .welcome .container-fluid .welcome-text h1 {
+  color: var(--second-base-color);
+  margin-bottom: 20px;
+  font-size: clamp(2.438rem, 3.869vw + 1.664rem, 4.063rem);
+  line-height: clamp(3.608rem, 5.726vw + 2.462rem, 6.013rem);
+  font-weight: 600;
+  font-family: "Lulo Clean", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .welcome .container-fluid .welcome-text h1 span {
+  color: var(--first-accent-color);
+}
+main .welcome .container-fluid .welcome-text p {
+  letter-spacing: 0.18em;
+  margin: 0;
+  color: var(--second-base-color);
+  font-size: clamp(1.5rem, 0vw + 1.5rem, 1.5rem);
+  line-height: clamp(2.7rem, 0vw + 2.7rem, 2.7rem);
+  font-weight: 400;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .professional {
+  height: 926px;
+  background: url("../img/bg-img/professional-bg-img.webp") no-repeat 50% -10%/cover;
+  background-blend-mode: overlay;
+}
+main .professional .container-fluid {
+  height: 100%;
+  position: relative;
+}
+main .professional .container-fluid .cv {
+  max-width: 560px;
+  min-width: 280px;
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 60px 0;
+  border-radius: 0;
+  background-color: var(--first-base-color);
+  transform: translate(-50%, -72.2%);
+}
+main .professional .container-fluid .cv img {
+  width: 76px;
+  height: 77px;
+  margin: 0 auto;
+}
+main .professional .container-fluid .cv .card-body {
+  max-width: 494px;
+  min-width: 214px;
+  width: 76.9%;
+  margin: 40px auto 45px;
+  padding: 0;
+  flex: none;
+}
+main .professional .container-fluid .cv .card-body p {
+  text-align: center;
+  color: var(--second-base-color);
+  font-size: clamp(0.875rem, 0.149vw + 0.845rem, 0.938rem);
+  line-height: clamp(2.188rem, 0.372vw + 2.113rem, 2.344rem);
+  font-weight: 400;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .professional .container-fluid .cv .cv-dl-btn {
+  width: 220px;
+  margin: 0 auto;
+  padding: 12.5px 0;
+  border-radius: 0;
+  border: 1px solid var(--first-accent-color);
+  color: var(--second-base-color);
+  font-size: clamp(0.875rem, 0vw + 0.875rem, 0.875rem);
+  line-height: clamp(1.313rem, 0vw + 1.313rem, 1.313rem);
+  font-weight: 400;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .professional .container-fluid .cv .cv-dl-btn:hover {
+  background: var(--first-accent-color);
+  transition: all 0.4s ease-in-out;
+}
+main .professional .container-fluid .profession {
+  max-width: 560px;
+  min-width: 280px;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 255px;
+}
+main .professional .container-fluid .profession .professional-text {
+  margin: 0 auto 41px;
+  text-align: center;
+  min-width: 280px;
+  width: 100%;
+}
+main .professional .container-fluid .profession .professional-text h2 {
+  margin-bottom: 12px;
+  color: var(--second-base-color);
+  font-size: clamp(1.375rem, 2.976vw + 0.78rem, 2.625rem);
+  line-height: clamp(1.788rem, 3.869vw + 1.014rem, 3.413rem);
+  font-weight: 600;
+  font-family: "Lulo Clean", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .professional .container-fluid .profession .professional-text h2 span {
+  color: var(--second-accent-color);
+}
+main .professional .container-fluid .profession .professional-text p {
+  margin: 0;
+  letter-spacing: 0.18em;
+  color: var(--second-base-color);
+  font-size: clamp(1.313rem, 0.446vw + 1.223rem, 1.5rem);
+  line-height: clamp(2.363rem, 0.804vw + 2.202rem, 2.7rem);
+  font-weight: 400;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, sans-serif;
+}
+main .professional .container-fluid .profession .knowledge-progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 9px 0;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop label, main .professional .container-fluid .profession .knowledge-progress .react label, main .professional .container-fluid .profession .knowledge-progress .wix label, main .professional .container-fluid .profession .knowledge-progress .javascript label, main .professional .container-fluid .profession .knowledge-progress .html-css label, main .professional .container-fluid .profession .knowledge-progress .bootstrap label, main .professional .container-fluid .profession .knowledge-progress .tailwindcss label {
+  margin-bottom: -5px;
+  letter-spacing: 0.05em;
+  color: var(--second-accent-color);
+  font-size: clamp(0.875rem, -0.149vw + 0.967rem, 0.938rem);
+  line-height: clamp(2.45rem, -0.417vw + 2.708rem, 2.625rem);
+  font-weight: 400;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, sans-serif;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress, main .professional .container-fluid .profession .knowledge-progress .react .progress, main .professional .container-fluid .profession .knowledge-progress .wix .progress, main .professional .container-fluid .profession .knowledge-progress .javascript .progress, main .professional .container-fluid .profession .knowledge-progress .html-css .progress, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress {
+  width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 0;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .progress-bar, main .professional .container-fluid .profession .knowledge-progress .react .progress .progress-bar, main .professional .container-fluid .profession .knowledge-progress .wix .progress .progress-bar, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .progress-bar, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .progress-bar, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .progress-bar, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .progress-bar {
+  height: 16px;
+  background: transparent;
+  position: relative;
+  transform: scaleX(0);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform-origin: left;
+  overflow: visible;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .progress-bar span, main .professional .container-fluid .profession .knowledge-progress .react .progress .progress-bar span, main .professional .container-fluid .profession .knowledge-progress .wix .progress .progress-bar span, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .progress-bar span, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .progress-bar span, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .progress-bar span, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .progress-bar span {
+  height: 100%;
+  width: 85%;
+  background: var(--first-accent-color);
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .react .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .wix .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .progress-bar span::after {
+  position: absolute;
+  right: -36px;
+  top: -11px;
+  background: transparent;
+  color: var(--second-accent-color);
+  height: 16px;
+  width: 30px;
+  text-align: center;
+  font-size: clamp(0.875rem, -0.149vw + 0.967rem, 0.938rem);
+  line-height: clamp(2.45rem, -0.417vw + 2.708rem, 2.625rem);
+  font-weight: 400;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, sans-serif;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .photoshop-progress-bar, main .professional .container-fluid .profession .knowledge-progress .react .progress .photoshop-progress-bar, main .professional .container-fluid .profession .knowledge-progress .wix .progress .photoshop-progress-bar, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .photoshop-progress-bar, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .photoshop-progress-bar, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .photoshop-progress-bar, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .photoshop-progress-bar {
+  width: 20%;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .photoshop-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .react .progress .photoshop-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .wix .progress .photoshop-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .photoshop-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .photoshop-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .photoshop-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .photoshop-progress-bar span::after {
+  content: "20%";
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .react-progress-bar, main .professional .container-fluid .profession .knowledge-progress .react .progress .react-progress-bar, main .professional .container-fluid .profession .knowledge-progress .wix .progress .react-progress-bar, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .react-progress-bar, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .react-progress-bar, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .react-progress-bar, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .react-progress-bar {
+  width: 13%;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .react-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .react .progress .react-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .wix .progress .react-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .react-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .react-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .react-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .react-progress-bar span::after {
+  content: "13%";
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .wix-progress-bar, main .professional .container-fluid .profession .knowledge-progress .react .progress .wix-progress-bar, main .professional .container-fluid .profession .knowledge-progress .wix .progress .wix-progress-bar, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .wix-progress-bar, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .wix-progress-bar, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .wix-progress-bar, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .wix-progress-bar {
+  width: 56%;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .wix-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .react .progress .wix-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .wix .progress .wix-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .wix-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .wix-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .wix-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .wix-progress-bar span::after {
+  content: "56%";
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .javascript-progress-bar, main .professional .container-fluid .profession .knowledge-progress .react .progress .javascript-progress-bar, main .professional .container-fluid .profession .knowledge-progress .wix .progress .javascript-progress-bar, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .javascript-progress-bar, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .javascript-progress-bar, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .javascript-progress-bar, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .javascript-progress-bar {
+  width: 44%;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .javascript-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .react .progress .javascript-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .wix .progress .javascript-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .javascript-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .javascript-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .javascript-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .javascript-progress-bar span::after {
+  content: "44%";
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .html-css-progress-bar, main .professional .container-fluid .profession .knowledge-progress .react .progress .html-css-progress-bar, main .professional .container-fluid .profession .knowledge-progress .wix .progress .html-css-progress-bar, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .html-css-progress-bar, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .html-css-progress-bar, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .html-css-progress-bar, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .html-css-progress-bar {
+  width: 68%;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .html-css-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .react .progress .html-css-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .wix .progress .html-css-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .html-css-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .html-css-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .html-css-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .html-css-progress-bar span::after {
+  content: "68%";
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .bootstrap-progress-bar, main .professional .container-fluid .profession .knowledge-progress .react .progress .bootstrap-progress-bar, main .professional .container-fluid .profession .knowledge-progress .wix .progress .bootstrap-progress-bar, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .bootstrap-progress-bar, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .bootstrap-progress-bar, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .bootstrap-progress-bar, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .bootstrap-progress-bar {
+  width: 46%;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .bootstrap-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .react .progress .bootstrap-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .wix .progress .bootstrap-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .bootstrap-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .bootstrap-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .bootstrap-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .bootstrap-progress-bar span::after {
+  content: "46%";
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .tailwindcss-progress-bar, main .professional .container-fluid .profession .knowledge-progress .react .progress .tailwindcss-progress-bar, main .professional .container-fluid .profession .knowledge-progress .wix .progress .tailwindcss-progress-bar, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .tailwindcss-progress-bar, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .tailwindcss-progress-bar, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .tailwindcss-progress-bar, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .tailwindcss-progress-bar {
+  width: 40%;
+}
+main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .tailwindcss-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .react .progress .tailwindcss-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .wix .progress .tailwindcss-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .tailwindcss-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .tailwindcss-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .tailwindcss-progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .tailwindcss-progress-bar span::after {
+  content: "40%";
+}
+main .portfolio-experience {
+  height: 3058px;
+  background: url("../img/bg-img/portfolio-bg-img.webp") no-repeat center center/cover;
+  background-blend-mode: overlay;
+}
+main .portfolio-experience .container-fluid {
+  padding: 37px 12px 24px;
+  height: 100%;
+}
+main .portfolio-experience .container-fluid .portfolio {
+  margin: 37px auto;
+}
+main .portfolio-experience .container-fluid .portfolio .portfolio-text {
+  min-width: 280px;
+  width: 100%;
+  margin: 0 auto 10px;
+  text-align: center;
+}
+main .portfolio-experience .container-fluid .portfolio .portfolio-text h2 {
+  margin-bottom: 10px;
+  color: var(--second-base-color);
+  font-size: clamp(1.375rem, 2.976vw + 0.78rem, 2.625rem);
+  line-height: clamp(2.035rem, 4.405vw + 1.154rem, 3.885rem);
+  font-weight: 600;
+  font-family: "Lulo Clean", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .portfolio-experience .container-fluid .portfolio .portfolio-text h2 span {
+  color: var(--second-accent-color);
+}
+main .portfolio-experience .container-fluid .portfolio .portfolio-text p {
+  letter-spacing: 0.1em;
+  width: 249px;
+  margin: 0 auto;
+  color: var(--second-base-color);
+  font-size: clamp(1.313rem, 0.446vw + 1.223rem, 1.5rem);
+  line-height: clamp(2.363rem, 0.804vw + 2.202rem, 2.7rem);
+  font-weight: 400;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .portfolio-experience .container-fluid .portfolio .portfolio-text p a {
+  letter-spacing: 0.1em;
+  color: var(--second-accent-color);
+  text-decoration: none;
+}
+main .portfolio-experience .container-fluid .portfolio .project-logo .project-1, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3 {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
+main .portfolio-experience .container-fluid .portfolio .project-logo .project-1 a .logo-1, main .portfolio-experience .container-fluid .portfolio .project-logo .project-1 .logo-2, main .portfolio-experience .container-fluid .portfolio .project-logo .project-1 .logo-3, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2 a .logo-1, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2 .logo-2, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2 .logo-3, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3 a .logo-1, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3 .logo-2, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3 .logo-3 {
+  width: 100%;
+}
+main .portfolio-experience .container-fluid .portfolio .project-logo .project-1 span a, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2 span a, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3 span a {
+  color: var(--bg-color);
+}
+main .portfolio-experience .container-fluid .portfolio .project-logo .project-1 span a:hover, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2 span a:hover, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3 span a:hover {
+  color: var(--second-base-color);
+}
+main .portfolio-experience .container-fluid .portfolio .project-logo .project-1 span a i, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2 span a i, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3 span a i {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-size: 1.375rem;
+  opacity: 0;
+}
+main .portfolio-experience .container-fluid .portfolio .project-logo .project-1:hover .logo-1, main .portfolio-experience .container-fluid .portfolio .project-logo .project-1:hover .logo-2, main .portfolio-experience .container-fluid .portfolio .project-logo .project-1:hover .logo-3, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2:hover .logo-1, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2:hover .logo-2, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2:hover .logo-3, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3:hover .logo-1, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3:hover .logo-2, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3:hover .logo-3 {
+  filter: brightness(90%);
+  transition: 0.2s ease-in-out;
+}
+main .portfolio-experience .container-fluid .portfolio .project-logo .project-1:hover span i, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2:hover span i, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3:hover span i {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+main .portfolio-experience .container-fluid .experience {
+  max-width: 560px;
+  min-width: 280px;
+  width: 80%;
+  margin: 0 auto 24px;
+  padding-top: 37px;
+}
+main .portfolio-experience .container-fluid .experience .experience-text {
+  max-width: none;
+  margin-bottom: 24px;
+  text-align: center;
+}
+main .portfolio-experience .container-fluid .experience .experience-text h2 {
+  color: var(--second-base-color);
+  font-size: clamp(1.375rem, 2.976vw + 0.78rem, 2.625rem);
+  line-height: clamp(2.035rem, 4.405vw + 1.154rem, 3.885rem);
+  font-weight: 600;
+  font-family: "Lulo Clean", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .portfolio-experience .container-fluid .experience .experience-text h2 span {
+  color: var(--second-accent-color);
+}
+main .portfolio-experience .container-fluid .experience .experience-content .middle-icon {
+  display: none;
+}
+main .portfolio-experience .container-fluid .experience .experience-content .first-exp, main .portfolio-experience .container-fluid .experience .experience-content .second-exp, main .portfolio-experience .container-fluid .experience .experience-content .third-exp {
+  max-width: 440px;
+  margin: 16px auto 0;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .portfolio-experience .container-fluid .experience .experience-content .first-exp .year, main .portfolio-experience .container-fluid .experience .experience-content .second-exp .year, main .portfolio-experience .container-fluid .experience .experience-content .third-exp .year {
+  width: 100%;
+  color: var(--first-accent-color);
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+  text-align: right;
+  font-weight: 600;
+  font-size: clamp(1rem, 0vw + 1rem, 1rem);
+  line-height: clamp(1.2rem, 0vw + 1.2rem, 1.2rem);
+}
+main .portfolio-experience .container-fluid .experience .experience-content .first-exp .company, main .portfolio-experience .container-fluid .experience .experience-content .second-exp .company, main .portfolio-experience .container-fluid .experience .experience-content .third-exp .company {
+  margin-bottom: 12px;
+  color: var(--second-base-color);
+  font-weight: 400;
+  font-size: clamp(1.375rem, 0.298vw + 1.315rem, 1.5rem);
+  line-height: clamp(1.581rem, 0.342vw + 1.513rem, 1.725rem);
+}
+main .portfolio-experience .container-fluid .experience .experience-content .first-exp .job, main .portfolio-experience .container-fluid .experience .experience-content .second-exp .job, main .portfolio-experience .container-fluid .experience .experience-content .third-exp .job {
+  font-weight: 400;
+  font-size: clamp(0.938rem, 0vw + 0.938rem, 0.938rem);
+  line-height: clamp(1.781rem, 0vw + 1.781rem, 1.781rem);
+}
+main .portfolio-experience .container-fluid .experience .experience-content .first-exp .job .role, main .portfolio-experience .container-fluid .experience .experience-content .second-exp .job .role, main .portfolio-experience .container-fluid .experience .experience-content .third-exp .job .role {
+  color: var(--second-base-color);
+}
+main .portfolio-experience .container-fluid .experience .experience-content .first-exp .job .description, main .portfolio-experience .container-fluid .experience .experience-content .second-exp .job .description, main .portfolio-experience .container-fluid .experience .experience-content .third-exp .job .description {
+  color: var(--second-accent-color);
+  margin: 0;
+}
+main .contact {
+  height: 194px;
+  background: url("../img/bg-img/contact-bg-img.webp") no-repeat 50% 0/cover;
+  background-blend-mode: overlay;
+}
+main .contact .container-fluid {
+  position: relative;
+}
+main .contact .container-fluid .contact-card {
+  max-width: 560px;
+  min-width: 280px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 53px 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -81.6%);
+  border-radius: 0;
+  background-color: var(--first-base-color);
+  text-align: center;
+}
+main .contact .container-fluid .contact-card .card-body {
+  margin: 0 auto;
+  padding: 0;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-text {
+  margin-bottom: 18px;
+  color: var(--second-base-color);
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-text h4 {
+  width: 260px;
+  margin: 0 auto 25px;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 0vw + 1.5rem, 1.5rem);
+  line-height: clamp(1.725rem, 0vw + 1.725rem, 1.725rem);
+}
+main .contact .container-fluid .contact-card .card-body .card-body-text .contact-description {
+  max-width: 272px;
+  min-width: 240px;
+  width: 90%;
+  letter-spacing: 0.05em;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: clamp(0.938rem, 0vw + 0.938rem, 0.938rem);
+  line-height: clamp(1.781rem, 0vw + 1.781rem, 1.781rem);
+}
+main .contact .container-fluid .contact-card .card-body .card-body-text .contact-description .my-website, main .contact .container-fluid .contact-card .card-body .card-body-text .contact-description .my-tel-num {
+  margin-bottom: 0;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form {
+  max-width: 339px;
+  min-width: 260px;
+  width: 100%;
+  padding: 0 16px;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form .first-row input, main .contact .container-fluid .contact-card .card-body .card-body-form .first-row textarea, main .contact .container-fluid .contact-card .card-body .card-body-form .second-row input, main .contact .container-fluid .contact-card .card-body .card-body-form .second-row textarea, main .contact .container-fluid .contact-card .card-body .card-body-form .third-row input, main .contact .container-fluid .contact-card .card-body .card-body-form .third-row textarea {
+  border-radius: 0;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form .first-row ::-moz-placeholder, main .contact .container-fluid .contact-card .card-body .card-body-form .second-row ::-moz-placeholder, main .contact .container-fluid .contact-card .card-body .card-body-form .third-row ::-moz-placeholder {
+  color: var(--second-accent-color);
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form .first-row ::placeholder, main .contact .container-fluid .contact-card .card-body .card-body-form .second-row ::placeholder, main .contact .container-fluid .contact-card .card-body .card-body-form .third-row ::placeholder {
+  color: var(--second-accent-color);
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form .first-row {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form .first-row input {
+  width: 50%;
+  height: 42px;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form .second-row, main .contact .container-fluid .contact-card .card-body .card-body-form .third-row {
+  margin: 12px 0;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form .third-row textarea {
+  height: 138px;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form .fourth-row button {
+  width: 100%;
+  padding: 6px 0;
+  border-radius: 0;
+  background-color: var(--first-accent-color);
+  color: var(--second-base-color);
+  font-size: clamp(0.938rem, 0vw + 0.938rem, 0.938rem);
+  line-height: clamp(1.406rem, 0vw + 1.406rem, 1.406rem);
+  font-weight: 400;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form .fourth-row button:hover {
+  background: var(--first-base-color);
+  transition: all 0.3s ease-in-out;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form .fifth-row {
+  height: 20px;
+}
+main .contact .container-fluid .contact-card .card-body .card-body-form .fifth-row .success-msg {
+  display: none;
+  margin: 0;
+  padding-top: 6px;
+  font-size: clamp(0.688rem, 0.595vw + 0.568rem, 0.938rem);
+  line-height: clamp(0.825rem, 0.714vw + 0.682rem, 1.125rem);
+  color: var(--first-accent-color);
+}
+main .contact .container-fluid .contact-card .social-bar {
+  margin-top: 39px;
+}
+main .contact .container-fluid .contact-card .social-bar a {
+  margin: 0 10px;
+}
+main .contact .container-fluid .contact-card .social-bar a i {
+  font-size: 1.5rem;
+  color: var(--second-base-color);
+}
+main .portfolio-grid {
+  background-color: var(--bg-color);
+}
+main .portfolio-grid .container-fluid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, 1fr);
+  grid-gap: 0px;
+  padding: 0;
+}
+main .portfolio-grid .container-fluid .grid-row-1 {
+  grid-area: 1/1/2/2;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 0px;
+  position: relative;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-1, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-2, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-3, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-4, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-5, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-7 {
+  position: relative;
+  border: 1px solid var(--second-base-color);
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-1 span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-2 span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-3 span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-4 span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-5 span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-6 span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-7 span h6 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  color: var(--second-base-color);
+  font-size: clamp(0.938rem, 0vw + 0.938rem, 0.938rem);
+  line-height: clamp(1.875rem, 0vw + 1.875rem, 1.875rem);
+  font-weight: 400;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-1 span a, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-2 span a, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-3 span a, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-4 span a, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-5 span a, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-6 span a, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-7 span a {
+  color: var(--first-base-color);
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-1 span a:hover, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-2 span a:hover, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-3 span a:hover, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-4 span a:hover, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-5 span a:hover, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-6 span a:hover, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-7 span a:hover {
+  color: var(--third-accent-color);
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-1 span a i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-2 span a i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-3 span a i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-4 span a i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-5 span a i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-6 span a i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-7 span a i {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-size: 1.375rem;
+  opacity: 0;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-1:hover img, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-2:hover img, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-3:hover img, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-4:hover img, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-5:hover img, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-6:hover img, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-7:hover img {
+  filter: brightness(80%);
+  transition: 0.2s ease-in-out;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-1:hover span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-2:hover span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-3:hover span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-4:hover span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-5:hover span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-6:hover span h6, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-7:hover span h6 {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-1:hover span i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-2:hover span i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-3:hover span i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-4:hover span i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-5:hover span i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-6:hover span i, main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-7:hover span i {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-1 {
+  grid-area: 1/1/3/3;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-1 img {
+  width: 100%;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-2 {
+  grid-area: 3/1/4/2;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-2 img {
+  width: 100%;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-3 {
+  grid-area: 3/2/4/3;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-3 img {
+  width: 100%;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-4 {
+  grid-area: 4/1/5/2;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-4 img {
+  width: 100%;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-5 {
+  grid-area: 4/2/5/3;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-5 img {
+  width: 100%;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-6 {
+  grid-area: 5/1/7/3;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-6 img {
+  width: 100%;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-7 {
+  grid-area: 7/1/9/3;
+}
+main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-7 img {
+  width: 100%;
+}
+main .portfolio-grid .container-fluid .grid-row-2 {
+  grid-area: 2/1/3/2;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-gap: 0px;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-8, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-9, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-10, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-11, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-12 {
+  position: relative;
+  border: 1px solid var(--second-base-color);
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-8 span h6, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-9 span h6, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-10 span h6, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-11 span h6, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-12 span h6 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  color: var(--second-base-color);
+  font-size: clamp(0.938rem, 0vw + 0.938rem, 0.938rem);
+  line-height: clamp(1.875rem, 0vw + 1.875rem, 1.875rem);
+  font-weight: 400;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-8 span a, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-9 span a, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-10 span a, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-11 span a, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-12 span a {
+  color: var(--first-base-color);
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-8 span a:hover, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-9 span a:hover, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-10 span a:hover, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-11 span a:hover, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-12 span a:hover {
+  color: var(--third-accent-color);
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-8 span a i, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-9 span a i, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-10 span a i, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-11 span a i, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-12 span a i {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-size: 1.375rem;
+  opacity: 0;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-8:hover img, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-9:hover img, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-10:hover img, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-11:hover img, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-12:hover img {
+  filter: brightness(80%);
+  transition: 0.2s ease-in-out;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-8:hover span h6, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-9:hover span h6, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-10:hover span h6, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-11:hover span h6, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-12:hover span h6 {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-8:hover span i, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-9:hover span i, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-10:hover span i, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-11:hover span i, main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-12:hover span i {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-8 {
+  grid-area: 1/1/3/3;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-8 img {
+  width: 100%;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-9 {
+  grid-area: 3/1/5/3;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-9 img {
+  width: 100%;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-10 {
+  grid-area: 5/1/7/3;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-10 img {
+  width: 100%;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-11 {
+  grid-area: 7/1/8/2;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-11 img {
+  width: 100%;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-12 {
+  grid-area: 7/2/8/3;
+}
+main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-12 img {
+  width: 100%;
+}
+
+footer {
+  background: var(--header-footer-color);
+  height: 154px;
+}
+footer .container-fluid {
+  height: 100%;
+  padding: 24px 12px;
+  width: 296px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .container-fluid a img {
+  width: 55px;
+  height: 55px;
+}
+footer .container-fluid p {
+  margin: 12px 0 0;
+  text-align: center;
+  color: var(--second-accent-color);
+  font-size: clamp(0.875rem, -0.149vw + 0.967rem, 0.938rem);
+  line-height: clamp(1.05rem, -0.179vw + 1.161rem, 1.125rem);
+  font-weight: 400;
+  font-family: "Avenir Light", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+footer .container-fluid p a {
+  color: var(--second-accent-color);
+}
+
+@media screen and (min-width: 375px) {
+  header .navbar .container-fluid .navbar-collapse {
+    width: 260px;
+  }
+  main .contact {
+    height: 244px;
+  }
+}
+@media screen and (min-width: 425px) {
+  header .navbar .container-fluid {
+    padding: 14px 24px;
+  }
+  header .navbar .container-fluid .navbar-collapse {
+    width: 270px;
+  }
+  main .welcome .container-fluid .welcome-text {
+    padding-top: 58px;
+  }
+  main .portfolio-experience .container-fluid .portfolio .portfolio-text {
+    margin-bottom: 20px;
+  }
+  main .portfolio-experience .container-fluid .portfolio .portfolio-text p {
+    width: auto;
+  }
+  main .portfolio-experience .container-fluid .portfolio .project-logo .project-1, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3 {
+    width: 320px;
+  }
+  main .contact {
+    height: 302px;
+  }
+  main .contact .container-fluid .contact-card {
+    transform: translate(-50%, -78%);
+  }
+}
+@media only screen and (min-width: 425px) and (min-width: 473px) {
+  main .welcome .container-fluid .welcome-text {
+    padding-top: 87px;
+  }
+}
+@media screen and (min-width: 576px) {
+  header .navbar .container-fluid {
+    padding: 14px 32px;
+  }
+  header .navbar .container-fluid .navbar-collapse {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  header .navbar {
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  }
+  header .navbar .container-fluid {
+    padding: 12px 42px;
+    height: 69px;
+  }
+  header .navbar .container-fluid a img {
+    width: 40px;
+    height: 40px;
+  }
+  header .navbar .container-fluid .navbar-collapse {
+    position: static;
+    width: 475px;
+    height: 44px;
+    padding: 0;
+    background: none;
+    flex-grow: unset;
+  }
+  header .navbar .container-fluid .navbar-collapse .navbar-nav {
+    margin: 0;
+  }
+  header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link {
+    padding: 9px 14px;
+    font-weight: 400;
+  }
+  header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+    color: var(--second-accent-color);
+  }
+  main .welcome {
+    background-attachment: fixed;
+  }
+  main .welcome .container-fluid {
+    padding: 0;
+  }
+  main .welcome .container-fluid .welcome-text {
+    max-width: 439px;
+    padding-top: 181px;
+  }
+  main .welcome .container-fluid .welcome-text h1 {
+    margin-bottom: 49px;
+  }
+  main .professional {
+    height: 1054px;
+    background-attachment: fixed;
+  }
+  main .professional .container-fluid {
+    padding: 0;
+  }
+  main .professional .container-fluid .cv {
+    max-width: none;
+    transform: translate(-50%, -50%);
+    padding: 60px 0;
+    width: 75%;
+  }
+  main .professional .container-fluid .profession {
+    padding-top: 426px;
+    max-width: none;
+    width: 85%;
+  }
+  main .professional .container-fluid .profession .professional-text {
+    margin-bottom: 79px;
+  }
+  main .professional .container-fluid .profession .professional-text h2 {
+    margin-bottom: 19px;
+  }
+  main .professional .container-fluid .profession .knowledge-progress {
+    gap: 14px 0;
+  }
+  main .professional .container-fluid .profession .knowledge-progress .photoshop, main .professional .container-fluid .profession .knowledge-progress .react, main .professional .container-fluid .profession .knowledge-progress .wix, main .professional .container-fluid .profession .knowledge-progress .javascript, main .professional .container-fluid .profession .knowledge-progress .html-css, main .professional .container-fluid .profession .knowledge-progress .bootstrap, main .professional .container-fluid .profession .knowledge-progress .tailwindcss {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0 26px;
+  }
+  main .professional .container-fluid .profession .knowledge-progress .photoshop label, main .professional .container-fluid .profession .knowledge-progress .react label, main .professional .container-fluid .profession .knowledge-progress .wix label, main .professional .container-fluid .profession .knowledge-progress .javascript label, main .professional .container-fluid .profession .knowledge-progress .html-css label, main .professional .container-fluid .profession .knowledge-progress .bootstrap label, main .professional .container-fluid .profession .knowledge-progress .tailwindcss label {
+    width: 134px;
+    text-align: right;
+  }
+  main .professional .container-fluid .profession .knowledge-progress .photoshop .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .react .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .wix .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .javascript .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .html-css .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .bootstrap .progress .progress-bar span::after, main .professional .container-fluid .profession .knowledge-progress .tailwindcss .progress .progress-bar span::after {
+    right: -50px;
+  }
+  main .portfolio-experience {
+    height: 2327px;
+  }
+  main .portfolio-experience .container-fluid {
+    padding: 0;
+  }
+  main .portfolio-experience .container-fluid .portfolio {
+    margin: 0 auto;
+    padding-top: 93px;
+  }
+  main .portfolio-experience .container-fluid .portfolio .portfolio-text {
+    margin-bottom: 86px;
+  }
+  main .portfolio-experience .container-fluid .portfolio .portfolio-text h2 {
+    margin-bottom: 15px;
+  }
+  main .portfolio-experience .container-fluid .portfolio .portfolio-text p {
+    width: auto;
+  }
+  main .portfolio-experience .container-fluid .portfolio .project-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .portfolio-experience .container-fluid .portfolio .project-logo .project-1, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3 {
+    width: 226px;
+    margin: 0;
+  }
+  main .portfolio-experience .container-fluid .experience {
+    max-width: none;
+    width: 100%;
+    margin: 133px auto 0;
+    padding: 0;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-text h2 {
+    margin-bottom: 12px;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-content {
+    margin-top: 56px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 360px 32px 360px;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 7px;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-content .first-exp, main .portfolio-experience .container-fluid .experience .experience-content .second-exp, main .portfolio-experience .container-fluid .experience .experience-content .third-exp {
+    width: 311px;
+    height: auto;
+    margin: 10px auto 0;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-content .first-exp .year, main .portfolio-experience .container-fluid .experience .experience-content .second-exp .year, main .portfolio-experience .container-fluid .experience .experience-content .third-exp .year {
+    margin-bottom: 13px;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-content .first-exp .company, main .portfolio-experience .container-fluid .experience .experience-content .second-exp .company, main .portfolio-experience .container-fluid .experience .experience-content .third-exp .company {
+    margin-bottom: 30px;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-content .middle-icon {
+    display: block;
+    margin: 10px auto 0;
+    grid-area: 1/2/4/3;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-content .first-exp {
+    grid-area: 1/3/2/4;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-content .first-exp .year {
+    text-align: left;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-content .second-exp {
+    grid-area: 2/1/3/2;
+    text-align: right;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-content .third-exp {
+    grid-area: 3/3/4/4;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-content .third-exp .year {
+    text-align: left;
+  }
+  main .contact {
+    height: 402px;
+    background-attachment: fixed;
+  }
+  main .contact .container-fluid .contact-card {
+    transform: translate(-50%, -50%);
+    max-width: none;
+    padding: 55px 0;
+  }
+  main .contact .container-fluid .contact-card .card-body {
+    max-width: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 33px;
+    align-items: center;
+  }
+  main .contact .container-fluid .contact-card .card-body .card-body-text {
+    width: 242px;
+    text-align: left;
+    margin: -10% 0 0;
+  }
+  main .contact .container-fluid .contact-card .card-body .card-body-text h4 {
+    width: auto;
+    margin-bottom: 29px;
+  }
+  main .contact .container-fluid .contact-card .card-body .card-body-text .contact-description {
+    min-width: 0;
+    width: auto;
+  }
+  main .contact .container-fluid .contact-card .card-body .card-body-text .contact-description .my-paragraph {
+    margin-bottom: 24px;
+  }
+  main .contact .container-fluid .contact-card .card-body .card-body-form {
+    width: 239px;
+    max-width: none;
+    min-width: 0;
+    padding: 0;
+  }
+  main .contact .container-fluid .contact-card .card-body .card-body-form .fourth-row button {
+    padding: 11px 0;
+  }
+  main .portfolio-grid {
+    overflow: hidden;
+    padding-top: 69px;
+  }
+  main .portfolio-grid .container-fluid .grid-row-1 .row-1 {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-1 {
+    grid-area: 1/1/3/3;
+  }
+  main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-2 {
+    grid-area: 3/1/4/2;
+  }
+  main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-3 {
+    grid-area: 3/2/4/3;
+  }
+  main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-4 {
+    grid-area: 1/3/2/4;
+  }
+  main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-5 {
+    grid-area: 1/4/2/5;
+  }
+  main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-6 {
+    grid-area: 2/3/4/5;
+  }
+  main .portfolio-grid .container-fluid .grid-row-1 .row-1 .project-7 {
+    grid-area: 1/5/4/8;
+  }
+  main .portfolio-grid .container-fluid .grid-row-2 .row-2 {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-8 {
+    grid-area: 1/1/2/2;
+  }
+  main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-9 {
+    grid-area: 1/2/2/3;
+  }
+  main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-10 {
+    grid-area: 2/1/4/3;
+  }
+  main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-11 {
+    grid-area: 1/3/4/6;
+  }
+  main .portfolio-grid .container-fluid .grid-row-2 .row-2 .project-12 {
+    grid-area: 1/6/4/9;
+  }
+  footer {
+    background: var(--bg-color);
+    height: auto;
+  }
+  footer .container-fluid {
+    padding: 24px 42px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+  }
+  footer .container-fluid a img {
+    width: 40px;
+    height: 40px;
+  }
+  footer .container-fluid .text {
+    max-width: 744px;
+    width: 475px;
+  }
+  footer .container-fluid .text p {
+    margin: 0;
+    text-align: left;
+  }
+  footer .container-fluid .text p a {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .navbar .container-fluid {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 56px;
+  }
+  header .navbar .container-fluid .navbar-collapse {
+    max-width: none;
+    width: 100%;
+  }
+  header .navbar .container-fluid .navbar-collapse .navbar-nav {
+    margin-left: 96px;
+  }
+  main .welcome {
+    height: 1086px;
+  }
+  main .welcome .container-fluid {
+    max-width: 980px;
+  }
+  main .welcome .container-fluid .welcome-text {
+    max-width: 539px;
+    width: 100%;
+    margin-left: 204px;
+  }
+  main .professional {
+    height: 1213px;
+    background-position-y: 0%;
+  }
+  main .professional .container-fluid {
+    max-width: 980px;
+  }
+  main .professional .container-fluid .cv {
+    width: 820px;
+    height: 670px;
+    padding: 79px 0 115px;
+  }
+  main .professional .container-fluid .cv img {
+    width: 100px;
+    height: 100px;
+  }
+  main .professional .container-fluid .cv .card-body {
+    max-width: 528px;
+    width: 100%;
+    height: 225px;
+    margin: 52px auto 49px;
+  }
+  main .professional .container-fluid .profession {
+    padding-top: 511px;
+  }
+  main .portfolio-experience {
+    height: 2744px;
+    background-position: 50% 25%;
+  }
+  main .portfolio-experience .container-fluid {
+    max-width: 980px;
+  }
+  main .portfolio-experience .container-fluid .portfolio {
+    padding-top: 185px;
+  }
+  main .portfolio-experience .container-fluid .portfolio .project-logo .project-1, main .portfolio-experience .container-fluid .portfolio .project-logo .project-2, main .portfolio-experience .container-fluid .portfolio .project-logo .project-3 {
+    width: 326px;
+  }
+  main .portfolio-experience .container-fluid .experience {
+    margin-top: 265px;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-text {
+    margin: 0;
+  }
+  main .portfolio-experience .container-fluid .experience .experience-text .experience-content {
+    margin-top: 91px;
+  }
+  main .contact {
+    height: 552px;
+  }
+  main .contact .container-fluid .contact-card {
+    width: 940px;
+    height: 631px;
+    padding: 126px 0 63px;
+  }
+  main .contact .container-fluid .contact-card .card-body {
+    gap: 0 65px;
+  }
+  main .contact .container-fluid .contact-card .card-body .card-body-text {
+    width: 272px;
+    height: 285px;
+    margin-top: -7%;
+  }
+  main .contact .container-fluid .contact-card .card-body .card-body-form {
+    width: 318px;
+  }
+  main .contact .container-fluid .contact-card .social-bar {
+    margin-top: 78px;
+  }
+  footer .container-fluid {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px 56px;
+    justify-content: start;
+  }
+  footer .container-fluid .text {
+    max-width: none;
+    width: 100%;
+  }
+  footer .container-fluid .text p {
+    text-align: center;
+  }
+}/*# sourceMappingURL=main.css.map */
