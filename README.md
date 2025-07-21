@@ -1,5 +1,9 @@
+# ⚠️ Status
+This portfolio was built in 2023 using HTML, CSS (SASS), JavaScript, and Bootstrap.  
+It represents version 1 of my developer journey and is now archived.  
+
 # Portfolio Showcase
-A curated collection of my work, skills, and projects, designed to highlight creativity, technical expertise, and seamless user experience.
+A collection of my work, skills, and projects, designed to highlight creativity, technical expertise, and seamless user experience.
 
 # 📖 About 
 This portfolio serves as a visual representation of my growth as a developer, featuring carefully crafted projects that blend aesthetics with functionality. The platform ensures a clean, responsive design that adapts effortlessly across devices. Every element is structured to provide an engaging experience for visitors exploring my work. 
@@ -17,11 +21,11 @@ This portfolio serves as a visual representation of my growth as a developer, fe
 - HTML - structuring the content with semantic elements
 - CSS (SASS) - preprocessor for scalable, maintainable styles and responsiveness
 - Bootstrap - used for UI components like cards, forms, buttons, and progress bars
-- JavaSript enhances interactivity and form handling
+- JavaSript - enhances interactivity and form handling
 - Formspree - manages contact form submissions
 
 # 💡 Inspiration
 This portfolio is a reflection of my dedication to front-end development, combining technical precision with creative storytelling. Every project is an opportunity to push boundaries, refine skills, and create meaningful digital experiences. The goal is to inspire connections and demonstrate a commitment to functional, accessible, and elegant design.
 
 # 🔗 Live Demo
-https://joshmarveycruz.netlify.app/index.html
+No longer actively maintained, but preserved for reference and growth comparison.
